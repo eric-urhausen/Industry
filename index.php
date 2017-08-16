@@ -3,8 +3,8 @@
 	// We compare $requestURL and $scriptName to remove the inappropriate values
 	$requestURI = explode('/', $_SERVER['REQUEST_URI']);
 	$scriptName = explode('/',$_SERVER['SCRIPT_NAME']);
-	 $con=mysql_connect('localhost','test-eric','r3dRover!');
-        mysql_select_db("test-industry",$con);
+	 $con=mysql_connect($host, $username,$password);
+        mysql_select_db($db,$con);
 	for ($i= 0; $i < sizeof($scriptName); $i++)
 	{
 	    if ($requestURI[$i] == $scriptName[$i])
